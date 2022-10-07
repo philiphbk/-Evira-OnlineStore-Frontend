@@ -4,6 +4,7 @@ import {
   Text,
   View,
   TextInput,
+  Button,
   ViewStyle,
   StyleProp,
   TextStyle,
@@ -19,10 +20,6 @@ const LoginPage = () => {
   return (
     <View>
       <Text>Create your account</Text>
-      <BouncyCheckbox
-        isChecked = {isSelected}
-        onPress={() => setSelection(!isSelected)}
-      />
       <TextInput
         placeholder="email"
         onChangeText={onChangeEmail}
@@ -33,7 +30,18 @@ const LoginPage = () => {
         onChangeText={onChangePassword}
         value={password}
       />
-      {/* Add button */}
+      <BouncyCheckbox
+        isChecked = {isSelected}
+        onPress={() => setSelection(!isSelected)}
+      />
+      {/* Should redirect to sign up page */}
+      <Button
+        title="Sign Up"
+        // onPress={() => }
+      />
+
+      <Text>or continue with</Text>
+      {/* add icons and auth with social media */}
     </View>
   )
 }

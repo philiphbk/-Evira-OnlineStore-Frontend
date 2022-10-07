@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 
-import LoginPage from './LoginPage'
+import LoginPage from './src/LoginPage'
 
 export default function App() {
   SplashScreen.preventAutoHideAsync()
