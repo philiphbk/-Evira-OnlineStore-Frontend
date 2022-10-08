@@ -60,7 +60,8 @@ const styles = StyleSheet.create({
   checkbox: {
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 20
+    marginTop: 20,
+    marginBottom: 20
   },
   logo: {
     width: 50,

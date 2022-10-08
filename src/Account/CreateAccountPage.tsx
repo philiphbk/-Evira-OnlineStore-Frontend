@@ -17,11 +17,12 @@ const CreateAccountPage = ({navigation}) => {
     <View style={styles.container}>
       <Text style={styles.header}>Create your Account</Text>
       <AuthForm>
-      <Button
-          title="Sign In"
-          onPress={() => navigation.navigate("SignIn")}
-        />
+        <Text style={styles.dark_button} >Sign Up</Text>
       </AuthForm>
+      <Text>
+        <Text style={styles.footer}>Dont't have an account?</Text>
+        <Text style={styles.sign_in} onPress={() => navigation.navigate("SignIn")}>Sign In</Text>
+      </Text>
     </View>
   )
 }
@@ -36,5 +37,26 @@ const styles = StyleSheet.create({
     marginBottom: 60,
     marginTop: 60,
     marginLeft: 10
+  },
+  dark_button: {
+    borderWidth: 1,
+    borderRadius: 30,
+    borderColor: "#dddddd",
+    padding: 20,
+    fontWeight: "bold",
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 30,
+    backgroundColor: "black",
+    color: "white",
+    overflow: 'hidden',
+    textAlign: 'center'
+  },
+  footer: {
+    textAlign: 'center',
+    color: "#aaaaaa"
+  },
+  sign_in: {
+    fontWeight: "bold"
   }
 })

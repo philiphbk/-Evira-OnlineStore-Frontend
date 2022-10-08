@@ -22,12 +22,11 @@ const LoginPage = ({navigation}) => {
       <Text style={styles.button}>Continue with Google</Text>
       <Text style={styles.button}>Continue with Apple</Text>
       <Text>or</Text>
-      <Button
-        title="Sign in with password"
-        onPress={() => navigation.navigate("SignIn")}
-      />
-      <Text>Don't have an account?</Text>
-      <Text onPress={() => navigation.navigate("SignUp")}>Sign up</Text>
+      <Text style={styles.dark_button} onPress={() => navigation.navigate("SignIn")}>Sign in with password</Text>
+      <Text>
+        <Text style={styles.footer}>Dont't have an account?</Text>
+        <Text style={styles.sign_up} onPress={() => navigation.navigate("SignIn")}>Sign Up</Text>
+      </Text>
     </View>
   )
 }
@@ -42,8 +41,7 @@ const styles = StyleSheet.create({
     marginBottom: 60,
     marginTop: 60,
     marginLeft: 10,
-    alignItems: "center",
-    justifyContent: "center"
+    textAlign: 'center'
   },
   button: {
     borderWidth: 1,
@@ -53,11 +51,33 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 20,
     marginRight: 20,
-    marginBottom: 15
+    marginBottom: 15,
+    textAlign: 'center'
+  },
+  dark_button: {
+    borderWidth: 1,
+    borderRadius: 30,
+    borderColor: "#dddddd",
+    padding: 20,
+    fontWeight: "bold",
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 30,
+    backgroundColor: "black",
+    color: "white",
+    overflow: 'hidden',
+    textAlign: 'center'
   },
   separator: {
     marginVertical: 8,
     borderBottomColor: '#737373',
     borderBottomWidth: StyleSheet.hairlineWidth,
   },
+  footer: {
+    textAlign: 'center',
+    color: "#aaaaaa"
+  },
+  sign_up: {
+    fontWeight: "bold"
+  }
 })

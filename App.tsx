@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginPage from './src/Account/LoginPage';
 import CreateAccountPage from './src/Account/CreateAccountPage';
 import SignInForm from './src/Account/SignInForm';
+import HomePage from './src/Dashboard/HomePage';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,10 @@ export default function App() {
           name="SignUp"
           component={CreateAccountPage}
         />
+        <Stack.Screen
+          name="Dashboard"
+          component={HomePage}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -42,8 +47,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-{/* <View style={styles.container}>
-<StatusBar style="auto" />
-<LoginPage />
-</View> */}
