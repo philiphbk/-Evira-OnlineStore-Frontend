@@ -8,6 +8,7 @@ import LoginPage from './src/Account/LoginPage';
 import CreateAccountPage from './src/Account/CreateAccountPage';
 import SignInForm from './src/Account/SignInForm';
 import HomePage from './src/Dashboard/HomePage';
+import CreateProfile from './src/Account/CreateProfile';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,10 @@ export default function App() {
         <Stack.Screen
           name="SignUp"
           component={CreateAccountPage}
+        />
+        <Stack.Screen
+          name="CreateProfile"
+          component={CreateProfile}
         />
         <Stack.Screen
           name="Dashboard"

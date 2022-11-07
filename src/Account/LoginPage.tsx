@@ -25,7 +25,7 @@ const LoginPage = ({navigation}) => {
       <Text style={styles.dark_button} onPress={() => navigation.navigate("SignIn")}>Sign in with password</Text>
       <Text>
         <Text style={styles.footer}>Dont't have an account?</Text>
-        <Text style={styles.sign_up} onPress={() => navigation.navigate("SignIn")}>Sign Up</Text>
+        <Text style={styles.sign_up} onPress={() => navigation.navigate("SignUp")}>Sign Up</Text>
       </Text>
     </View>
   )
