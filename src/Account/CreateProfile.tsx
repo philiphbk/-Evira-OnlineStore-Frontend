@@ -29,7 +29,7 @@ const CreateProfile = ({navigation}) => {
 
   return(
     <View>
-      <Text>Fill Your Profile</Text>
+      <Text style={styles.header}> Fill Your Profile</Text>
       <>
         <TextInput
           placeholder="Full Name"
@@ -65,11 +65,12 @@ const CreateProfile = ({navigation}) => {
           open={open}
           value={gender}
           items={items}
+          style={styles.formInput}
           setOpen={setOpen}
           setValue={setGender}
           setItems={setItems}
         />
-        <Text style={styles.dark_button}  >Save</Text>
+        <Text style={styles.dark_button} onPress={navigation.navigate("Dashboard")}>Save</Text>
       </>
     </View>
   )
@@ -78,7 +79,7 @@ const CreateProfile = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {margin: 10},
   header: {
-    fontSize: 50,
+    fontSize: 30,
     fontWeight: "bold",
     marginBottom: 60,
     marginTop: 60,
@@ -88,7 +89,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 20,
     color: 'grey',
-    borderColor: 'black',
+    borderColor: '#eeeeee',
     fontSize: 15,
     backgroundColor: '#eeeeee',
     margin: 10
@@ -102,6 +103,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 30,
+    marginTop: 30,
     backgroundColor: "black",
     color: "white",
     overflow: 'hidden',
